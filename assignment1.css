@@ -4,7 +4,7 @@
     font-family: 'Roboto', sans-serif;
 }
 body{
-    background-image: url("https://rmanrey26.w3spaces.com/images/background.png");
+    background-image: url("background.png");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
