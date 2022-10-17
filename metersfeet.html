@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Celsius & Fahrenheit </title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="assignment1.css">
+</head>
+<body>
+    <div class="wrapper">
+      <ul>
+        <li><b><a href="https://rmanrey26.w3spaces.com/CS-1130.html">Home</b></a></li>
+        <li><b>Assignment 1</b>
+          <ul>
+            <li><a href="https://rmanrey26.w3spaces.com/celsiusfahrenheit.html">Celsius & Fahrenheit</a></li>
+            <li>Meters & Feet</li>
+          </ul>
+        </li>
+        <li><b>Assignment 2</b>
+          <ul>
+            <li>Income Tax Calculator</li>
+          </ul>
+        </li>
+        <li><b>Assignment 3</b>
+          <ul>
+            <li>Factorial</li>
+            <li>Sum</li>
+            <li>Average</li>
+          </ul>
+        </li>
+        <li><b>Assignment 4</b>
+          <ul>
+            <li>Simple Payroll</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="converter">
+        <h1>Meters to Feet</h1>
+          <div class="input-data">
+              <label for "meters" style=color:white;">Meters</label>
+              <input type="number" style=color:white id="meters" onkeyup="mtof()" onfocus="this.value''" value="0"></input>
+          </div>
+    </div>
+    <div class="converter1">
+        <div class="input-data">
+            <label for "feet" style=color:white;">Feet</label>
+            <input type="number" style=color:white id="feet" onfocus="this.value=''" value="0" disabled>
+        </div>
+    </div>
+
+    <div class="converter2">
+        <h1>Feet to Meters</h1>
+          <div class="input-data">
+              <label for "feet1" style=color:white;">Feet</label>
+              <input type="number" style=color:white id="feet1" onkeyup="ftom()" onfocus="this.value''" value="0"></input>
+          </div>
+    </div>
+    <div class="converter3">
+        <div class="input-data">
+            <label for "meters1" style=color:white;">Meters</label>
+            <input type="number" style=color:white id="meters1" onfocus="this.value=''" value="0" disabled>
+        </div>
+    </div>
+</body>
+
+<script>
+    let meters = document.getElementById("meters");
+    let feet = document.getElementById("feet");
+    let meters1 = document.getElementById("meters1");
+    let feet1 = document.getElementById("feet1");  
+
+function mtof() {
+    let output = (parseFloat(meters.value) * 3.281);
+    feet.value = parseFloat(output.toFixed(2));
+}
+
+function ftom() {
+    let output1 = (parseFloat(feet1.value) / 3.281);
+    meters1.value = parseFloat(output1.toFixed(2));
+}
+</script>
+</html>
