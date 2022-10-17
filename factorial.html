@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Factorial </title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="assignment1.css">
+</head>
+<body>
+    <div class="wrapper">
+      <ul>
+        <li><b><a href="https://rmanrey26.w3spaces.com/CS-1130.html">Home</b></a></li>
+        <li><b>Assignment 1</b>
+          <ul>
+            <li><a href="https://rmanrey26.w3spaces.com/celsiusfahrenheit.html">Celsius & Fahrenheit</a></li>
+            <li><a href="https://rmanrey26.w3spaces.com/metersfeet.html">Meters & Feet</a></li>
+          </ul>
+        </li>
+        <li><b>Assignment 2</b>
+          <ul>
+            <li>Income Tax Calculator</li>
+          </ul>
+        </li>
+        <li><b>Assignment 3</b>
+          <ul>
+            <li>Factorial</li>
+            <li>Sum</li>
+            <li>Average</li>
+          </ul>
+        </li>
+        <li><b>Assignment 4</b>
+          <ul>
+            <li>Simple Payroll</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="converter">
+        <h1>Factorial</h1>
+          <div class="input-data">
+              <label for "num" style=color:white;">Enter a number</label>
+              <input type="number" style=color:white id="num" onkeyup="factorial()" onfocus="this.value''" value="0"></input>
+          </div>
+    </div>
+    <div class="converter1">
+        <div class="input-data">
+            <label for "fact" style=color:white;">Factorial</label>
+            <input type="number" style=color:white id="fact" onfocus="this.value=''" value="0" disabled>
+        </div>
+    </div>
+</body>
+
+<script>
+function factorial()
+{
+    var n = document.getElementById("num").value*1;
+    var f = 1;
+    var i = 1;
+        
+    while (i <= n){
+        f*=i;
+        i++;
+    }
+
+    document.getElementById("fact").value=f;
+}
+</script>
+</html>
