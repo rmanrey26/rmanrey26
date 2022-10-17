@@ -9,21 +9,21 @@
 <body>
     <div class="wrapper">
       <ul>
-        <li><b><a href="CS-1130.html">Home</b></a></li>
+        <li><b><a href="https://rmanrey26.w3spaces.com/CS-1130.html">Home</b></a></li>
         <li><b>Assignment 1</b>
           <ul>
             <li>Celsius & Fahrenheit</li>
-            <li>Meters & Feet</li>
+            <li><a href="https://rmanrey26.w3spaces.com/metersfeet.html">Meters & Feet</a></li>
           </ul>
         </li>
         <li><b>Assignment 2</b>
           <ul>
-            <li>Income Tax Calculator</li>
+            <li><a href="https://rmanrey26.w3spaces.com/incometax.html">Income Tax Calculator</a>
           </ul>
         </li>
         <li><b>Assignment 3</b>
           <ul>
-            <li>Factorial</li>
+            <li><a href="https://rmanrey26.w3spaces.com/factorial.html">Factorial</a></li>
             <li>Sum</li>
             <li>Average</li>
           </ul>
@@ -36,13 +36,12 @@
       </ul>
     </div>
 
-    <div class="converter"
-        <div class="box">
-            <div class="input-data">
-                <label for "celsius" style=color:white;">Celsius (°C)</label>
-               <input type="number" style=color:white id="celsius" onkeyup="ctof()" onfocus="this.value''" value="0"></input>
-            </div>
-        </div>
+    <div class="converter">
+        <h1> Celsius to Fahrenheit </h1>
+          <div class="input-data">
+              <label for "celsius" style=color:white;">Celsius (°C)</label>
+              <input type="number" style=color:white id="celsius" onkeyup="ctof()" onfocus="this.value''" value="0"></input>
+          </div>
     </div>
     <div class="converter1">
         <div class="input-data">
@@ -50,15 +49,36 @@
             <input type="number" style=color:white id="fahrenheit" onfocus="this.value=''" value="32" disabled>
         </div>
     </div>
+
+    <div class="converter2">
+        <h1>Fahrenheit to Celsius</h1>
+          <div class="input-data">
+              <label for "fahrenheit1" style=color:white;">Fahrenheit (°F)</label>
+              <input type="number" style=color:white id="fahrenheit1" onkeyup="ftoc()" onfocus="this.value''" value="32"></input>
+          </div>
+    </div>
+    <div class="converter3">
+        <div class="input-data">
+            <label for "celsius1" style=color:white;">Celsius (°C)</label>
+            <input type="number" style=color:white id="celsius1" onfocus="this.value=''" value="0" disabled>
+        </div>
+    </div>
 </body>
 
 <script>
     let celsius = document.getElementById("celsius");
     let fahrenheit = document.getElementById("fahrenheit");
+    let celsius1 = document.getElementById("celsius1");
+    let fahrenheit1 = document.getElementById("fahrenheit1");  
 
 function ctof() {
     let output = (parseFloat(celsius.value) * 9 / 5) + 32;
     fahrenheit.value = parseFloat(output.toFixed(2));
+}
+
+function ftoc() {
+    let output1 = (parseFloat(fahrenheit1.value) -32 ) * 5/9;
+    celsius1.value = parseFloat(output1.toFixed(2));
 }
 </script>
 </html>
