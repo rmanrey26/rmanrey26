@@ -24,8 +24,8 @@
         <li><b>Assignment 3</b>
           <ul>
             <li>Factorial</li>
-            <li>Sum</li>
-            <li>Average</li>
+            <li><a href="https://rmanrey26.w3spaces.com/sum.html">Sum</a></li>
+            <li><a href="https://rmanrey26.w3spaces.com/average.html">Average</a></li>
           </ul>
         </li>
         <li><b>Assignment 4</b>
@@ -45,8 +45,8 @@
     </div>
     <div class="converter1">
         <div class="input-data">
-            <label for "fact" style=color:white;">Factorial</label>
-            <input type="number" style=color:white id="fact" onfocus="this.value=''" value="0" disabled>
+            <label for "fact" id="factlabel" style=color:white;">The factorial of n is</label>
+            <input type="number" style=color:white id="fact" onfocus="this.value=''" value="n" disabled>
         </div>
     </div>
 </body>
@@ -62,7 +62,7 @@ function factorial()
         f*=i;
         i++;
     }
-
+    document.getElementById("factlabel").innerHTML="The factorial of " + n + " is";
     document.getElementById("fact").value=f;
 }
 </script>
