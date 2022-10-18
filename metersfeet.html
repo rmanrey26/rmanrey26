@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,8 +12,8 @@
         <li><b><a href="CS-1130.html">Home</b></a></li>
         <li><b>Assignment 1</b>
           <ul>
-            <li><a href="celsiusfahrenheit.html">Celsius & Fahrenheit</a></li>
-            <li>Meters & Feet</li>
+            <li>Celsius & Fahrenheit</li>
+            <li><a href="metersfeet.html">Meters & Feet</a></li>
           </ul>
         </li>
         <li><b>Assignment 2</b>
@@ -37,48 +37,48 @@
     </div>
 
     <div class="converter">
-        <h1>Meters to Feet</h1>
+        <h1> Celsius to Fahrenheit </h1>
           <div class="input-data">
-              <label for "meters" style=color:white;">Meters</label>
-              <input type="number" style=color:white id="meters" onkeyup="mtof()" onfocus="this.value''" value="0"></input>
+              <label for "celsius" style=color:white;">Celsius (°C)</label>
+              <input type="number" style=color:white id="celsius" onkeyup="ctof()" onfocus="this.value''" value="0"></input>
           </div>
     </div>
     <div class="converter1">
         <div class="input-data">
-            <label for "feet" style=color:white;">Feet</label>
-            <input type="number" style=color:white id="feet" onfocus="this.value=''" value="0" disabled>
+            <label for "celsius" style=color:white;">Fahrenheit (°F)</label>
+            <input type="number" style=color:white id="fahrenheit" onfocus="this.value=''" value="32" disabled>
         </div>
     </div>
 
     <div class="converter2">
-        <h1>Feet to Meters</h1>
+        <h1>Fahrenheit to Celsius</h1>
           <div class="input-data">
-              <label for "feet1" style=color:white;">Feet</label>
-              <input type="number" style=color:white id="feet1" onkeyup="ftom()" onfocus="this.value''" value="0"></input>
+              <label for "fahrenheit1" style=color:white;">Fahrenheit (°F)</label>
+              <input type="number" style=color:white id="fahrenheit1" onkeyup="ftoc()" onfocus="this.value''" value="32"></input>
           </div>
     </div>
     <div class="converter3">
         <div class="input-data">
-            <label for "meters1" style=color:white;">Meters</label>
-            <input type="number" style=color:white id="meters1" onfocus="this.value=''" value="0" disabled>
+            <label for "celsius1" style=color:white;">Celsius (°C)</label>
+            <input type="number" style=color:white id="celsius1" onfocus="this.value=''" value="0" disabled>
         </div>
     </div>
 </body>
 
 <script>
-    let meters = document.getElementById("meters");
-    let feet = document.getElementById("feet");
-    let meters1 = document.getElementById("meters1");
-    let feet1 = document.getElementById("feet1");  
+    let celsius = document.getElementById("celsius");
+    let fahrenheit = document.getElementById("fahrenheit");
+    let celsius1 = document.getElementById("celsius1");
+    let fahrenheit1 = document.getElementById("fahrenheit1");  
 
-function mtof() {
-    let output = (parseFloat(meters.value) * 3.281);
-    feet.value = parseFloat(output.toFixed(2));
+function ctof() {
+    let output = (parseFloat(celsius.value) * 9 / 5) + 32;
+    fahrenheit.value = parseFloat(output.toFixed(2));
 }
 
-function ftom() {
-    let output1 = (parseFloat(feet1.value) / 3.281);
-    meters1.value = parseFloat(output1.toFixed(2));
+function ftoc() {
+    let output1 = (parseFloat(fahrenheit1.value) -32 ) * 5/9;
+    celsius1.value = parseFloat(output1.toFixed(2));
 }
 </script>
 </html>
