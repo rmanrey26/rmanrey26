@@ -38,14 +38,16 @@
 
     <div class="converter">
         <h1>Summation</h1>
+        <br>
           <div class="input-data">
               <label for "num" style=color:white;">Enter a number</label>
               <input type="number" style=color:white id="num" onkeyup="summation()" onfocus="this.value''" value="0"></input>
           </div>
-    </div>
-    <div class="converter1">
         <div class="input-data">
-            <label for "display" style=color:white;">Sum of first n numbers</label>
+          <br>
+          <br>
+          <br>
+            <label for "display" id="displayid" style=color:white;">Sum of first n numbers</label>
             <input type="number" style=color:white id="display" onfocus="this.value=''" value="0" disabled>
         </div>
     </div>
@@ -61,6 +63,7 @@ do{
 }
 while(i <= number)
     document.getElementById("display").value=sum;
+    document.getElementById("displayid").innerHTML="Sum of first " + number + " numbers is";
 }
 
 </script>
