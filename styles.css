@@ -4,7 +4,7 @@
     font-family: 'Roboto', sans-serif;
 }
 body{
-    background-image: url("https://rmanrey26.w3spaces.com/images/background.png");
+    background-image: url("backgroundhome.png");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
@@ -52,12 +52,12 @@ body{
     height: 88%;
     align-items: center;
     position: absolute;
-    margin-left: 60px;
+    margin-left: 140px;
 }
 h1{
     color: #fff;
-    font-size: 100px;
-    line-height: 100px;
+    font-size: 150px;
+    line-height: 150px;
 }
 h2{
     color: #fff;
