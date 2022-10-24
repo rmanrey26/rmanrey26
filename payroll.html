@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Table</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div class="wrapper">
+        <ul>
+          <li><b><a href="https://rmanrey26.w3spaces.com/CS-1130.html">Home</b></a></li>
+          <li><b>Assignment 1</b>
+            <ul>
+              <li>Celsius & Fahrenheit</li>
+              <li><a href="https://rmanrey26.w3spaces.com/metersfeet.html">Meters & Feet</a></li>
+            </ul>
+          </li>
+          <li><b>Assignment 2</b>
+            <ul>
+              <li><a href="https://rmanrey26.w3spaces.com/incometax.html">Income Tax Calculator</a>
+            </ul>
+          </li>
+          <li><b>Assignment 3</b>
+            <ul>
+              <li><a href="https://rmanrey26.w3spaces.com/factorial.html">Factorial</a></li>
+              <li><a href="https://rmanrey26.w3spaces.com/sum.html">Sum</a></li>
+              <li><a href="https://rmanrey26.w3spaces.com/average.html">Average</a></li>
+            </ul>
+          </li>
+          <li><b>Assignment 4</b>
+            <ul>
+              <li>Simple Payroll</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+<form method="POST" name="sample">
+<div class="inputmenu">
+    <div class="input-data">
+        <label for "number" style=color:white;">Employee No.:</label>
+        <input type="number" style=color:white id="number" name="number" onfocus="this.value''" value="1" readonly>
+    </div> 
+    <div class="input-data1">
+        <label for "text" style=color:white;>Employee Name:</label>
+        <input type="text" style=color:white id="name" name="name">
+    </div> 
+    <div class="input-data">
+    </div>
+    <div class="input-data">
+        <label for "daysworked" style=color:white;">Days Worked:</label>
+        <input type="number" style=color:white id="daysworked" name="daysworked" onkeyup="compute()">
+    </div>
+    <div class="input-data">
+        <label for "dailyrate" style=color:white;">Daily Rate:</label>
+        <input type="number" style=color:white id="dailyrate" name="dailyrate" onkeyup="compute()">
+    </div>
+    <div class="input-data">
+        <label for "deductionamount" style=color:white;">Deduction Amount:</label>
+         <input type="number" style=color:white id="deductionamount" name="deductionamount" onkeyup="compute()">
+    </div>
+    <div class="input-data">
+        <label for "grosspay" style=color:white;"> Gross Pay: </label>
+        <input type="number" style=color:white id="grosspay" name="grosspay" id="grosspay" readonly>
+    </div>
+    <div class="input-data">
+        <label for "netpay" style=color:white;"> Net Pay:  </label>
+        <input type="number" style=color:white id="netpay" name="netpay" id="netpay" readonly>
+    </div>
+    <div class="input-data">
+        <label for "netpay" style=color:white;"> Total Employees:  </label>
+        <input type="number" style=color:white id="total" name="total" id="total" onfocus="this.value''" value="0" readonly>
+    </div>
+    <div class="addbutton">
+    <input type="button" name="add" value="Add Employee" onclick="addStudent();" class="btn btn-success">
+    </div>
+</div>
+<div class="tablecontent">
+    <div class="number">
+    <table id="tbl1" style=color:white class="table">
+        <tr>
+            <th>No.</th>
+        </tr>
+        <tr>
+            <td style="display:none" id="1">1</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="2">2</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="3">3</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="4">4</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="5">5</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="6">6</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="7">7</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="8">8</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="9">9</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="10">10</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="11">11</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="12">12</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="13">13</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="14">14</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="15">15</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="16">16</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="17">17</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="18">18</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="19">19</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="20">20</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="21">21</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="22">22</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="23">23</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="24">14</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="25">15</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="26">16</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="27">17</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="28">18</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="29">19</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="30">20</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="31">21</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="32">22</td>
+        </tr>
+        <tr>
+            <td style="display:none" id="33">23</td>
+        </tr>
+    </table>
+    </div>
+    <div class="content">
+            <table id="tbl" style=color:white class="table">
+                <thead>
+                <th>Employee</th>
+                <th>Days Worked</th>
+                <th>Daily Rate</th>
+                <th>Gross Pay</th>
+                <th>Deduction Amount</th>
+                <th>Net Pay</th>
+                <th>Delete</th>
+                </thead>
+                
+                 <tbody>
+                     
+                 </tbody>
+             </table>
+    </div>
+</div>
+</form>
+
+ <script type="text/javascript">
+    employee=[];
+    function compute(){
+        var gp, np, dw, dr, da;
+
+        dw = document.getElementById("daysworked").value*1;
+        dr = document.getElementById("dailyrate").value*1;
+        da = document.getElementById("deductionamount").value*1;
+
+        gp=dw*dr;
+        np=gp-da;
+
+        document.getElementById("grosspay").value=gp;
+        document.getElementById("netpay").value=np;
+    }
+
+    function addStudent()
+    { 
+        var employeename=document.getElementById("name").value;
+        employee.push(employeename);
+        document.getElementById("number").value=employee.length+1;
+
+        var name=document.sample.name.value; 
+        var daysworked=document.sample.daysworked.value; 
+        var dailyrate=document.sample.dailyrate.value; 
+        var deductionamount=document.sample.deductionamount.value; 
+        var grosspay=document.sample.grosspay.value; 
+        var netpay=document.sample.netpay.value;
+
+        
+        var tr = document.createElement('tr');
+        
+        var td1 = tr.appendChild(document.createElement('td'));
+        var td2 = tr.appendChild(document.createElement('td'));
+        var td3 = tr.appendChild(document.createElement('td'));
+        var td4 = tr.appendChild(document.createElement('td'));
+        var td5 = tr.appendChild(document.createElement('td'));
+        var td6 = tr.appendChild(document.createElement('td'));
+        var td7 = tr.appendChild(document.createElement('td'));
+        
+        td1.innerHTML=name;
+        td2.innerHTML=daysworked;
+        td3.innerHTML=dailyrate;
+        td4.innerHTML=grosspay*1;
+        td5.innerHTML=deductionamount;
+        td6.innerHTML=netpay*1;
+        td7.innerHTML='<input type="button" name="del" value="Delete" onclick="delStudent(this);" class="btn btn-danger">'
+
+        document.getElementById("tbl").appendChild(tr);
+        
+        var showrow, show;
+        showrow = employee.length;
+        show = document.getElementById(showrow);
+        show.style.display="block";
+
+        var total;
+        total = employee.length;
+        document.getElementById("total").value=total;
+
+    }
+
+    function delStudent(Stud){
+        var s=Stud.parentNode.parentNode;
+        s.parentNode.removeChild(s);
+
+        employee.splice(0,1);
+        document.getElementById("number").value=employee.length+1;
+
+        var hiderow, hide;
+        hiderow = employee.length;
+        hide = document.getElementById(hiderow+1);
+        hide.style.display="none";
+
+        total = employee.length;
+        document.getElementById("total").value=total;
+    }
+    
+    
+    </script>
+    </body>
+</html>
+
+
