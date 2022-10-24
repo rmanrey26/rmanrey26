@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-image: url("backgroundassignment.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.inputmenu{
+    border-top: 60px;
+    justify-content: center;
+    width: 1750px;
+    background: rgba(255, 255, 255, 0.095);
+    padding: 50px;
+    box-shadow: 0px 0px 10px rgba (0,0,0,0.1);
+    display: flex;
+    flex-direction:row;
+    margin-top: 162px;
+    position: relative;
+    border-radius: 50px;
+}
+.inputmenu h1{
+    color: white;
+}
+.inputmenu .input-data{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.inputmenu .input-data label{
+    width: 150px;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bolder;
+
+}
+.inputmenu .input-data input{
+    height: 30px;
+    width: 50%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0);
+    text-decoration-color: white;
+}
+
+.inputmenu .input-data1{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.inputmenu .input-data1 label{
+    width: 150px;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bolder;
+
+}
+
+.inputmenu .input-data1 input{
+    height: 30px;
+    width: 160%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0);
+    text-decoration-color: white;
+}
+.inputmenu .addbutton input{
+    background-color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.table {
+    float:left;
+}
+
+.tablecontent .table{
+    margin-left: 30px;
+    font-size: 30px;
+    height: auto;
+    text-align: center;
+    border-collapse: 2px solid rgb(255, 255, 255);
+    margin-top: 23px;
+}
+
+.tablecontent .number table{
+    width: 10%;
+}
+
+.tablecontent .number table td{
+    height: 38px;
+}
+
+
+.tablecontent .content table{
+    width: 80%;
+}
+
+.tablecontent .content table input{
+    background-color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    padding: 5px 5px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+}
