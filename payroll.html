@@ -71,7 +71,7 @@
         <input type="number" style=color:white id="total" name="total" id="total" onfocus="this.value''" value="0" readonly>
     </div>
     <div class="addbutton">
-    <input type="button" name="add" value="Add Employee" onclick="addStudent();" class="btn btn-success">
+    <input type="button" name="add" value="Add Employee" onclick="addEmployee();" class="btn btn-success">
     </div>
 </div>
 <div class="tablecontent">
@@ -217,7 +217,7 @@
         document.getElementById("netpay").value=np;
     }
 
-    function addStudent()
+    function addEmployee()
     { 
         var employeename=document.getElementById("name").value;
         employee.push(employeename);
@@ -247,7 +247,7 @@
         td4.innerHTML=grosspay*1;
         td5.innerHTML=deductionamount;
         td6.innerHTML=netpay*1;
-        td7.innerHTML='<input type="button" name="del" value="Delete" onclick="delStudent(this);" class="btn btn-danger">'
+        td7.innerHTML='<input type="button" name="del" value="Delete" onclick="delEmployee(this);" class="btn btn-danger">'
 
         document.getElementById("tbl").appendChild(tr);
         
@@ -262,7 +262,7 @@
 
     }
 
-    function delStudent(Stud){
+    function delEmployee(Stud){
         var s=Stud.parentNode.parentNode;
         s.parentNode.removeChild(s);
 
