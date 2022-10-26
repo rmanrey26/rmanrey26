@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Payroll</title>
     <link rel="stylesheet" href="styles1.css">
     <link rel="stylesheet" href="navbar.css">
@@ -36,11 +38,12 @@
       </div>
 <form method="POST" name="sample">
 <div class="inputmenu">
+    <div class="col1">
     <div class="input-data">
         <label for "number" style=color:white;">Employee No.:</label>
         <input type="number" style=color:white id="number" name="number" onfocus="this.value''" value="1" readonly>
     </div> 
-    <div class="input-data1">
+    <div class="input-data">
         <label for "text" style=color:white;>Employee Name:</label>
         <input type="text" style=color:white id="name" name="name">
     </div> 
@@ -54,6 +57,8 @@
         <label for "dailyrate" style=color:white;">Daily Rate:</label>
         <input type="number" style=color:white id="dailyrate" name="dailyrate" onkeyup="compute()">
     </div>
+    </div>
+    <div class="col2">
     <div class="input-data">
         <label for "deductionamount" style=color:white;">Deduction Amount:</label>
          <input type="number" style=color:white id="deductionamount" name="deductionamount" onkeyup="compute()">
@@ -70,8 +75,9 @@
         <label for "netpay" style=color:white;"> Total Employees:  </label>
         <input type="number" style=color:white id="total" name="total" id="total" onfocus="this.value''" value="0" readonly>
     </div>
+    </div>
     <div class="addbutton">
-    <input type="button" name="add" value="Add Employee" onclick="addEmployee();" class="btn btn-success">
+    <input type="button" name="add" value="Add Employee" onclick="addStudent();" class="btn btn-success">
     </div>
 </div>
 <div class="tablecontent">
@@ -150,34 +156,34 @@
             <td style="display:none" id="23">23</td>
         </tr>
         <tr>
-            <td style="display:none" id="24">14</td>
+            <td style="display:none" id="24">24</td>
         </tr>
         <tr>
-            <td style="display:none" id="25">15</td>
+            <td style="display:none" id="25">25</td>
         </tr>
         <tr>
-            <td style="display:none" id="26">16</td>
+            <td style="display:none" id="26">26</td>
         </tr>
         <tr>
-            <td style="display:none" id="27">17</td>
+            <td style="display:none" id="27">27</td>
         </tr>
         <tr>
-            <td style="display:none" id="28">18</td>
+            <td style="display:none" id="28">28</td>
         </tr>
         <tr>
-            <td style="display:none" id="29">19</td>
+            <td style="display:none" id="29">29</td>
         </tr>
         <tr>
-            <td style="display:none" id="30">20</td>
+            <td style="display:none" id="30">30</td>
         </tr>
         <tr>
-            <td style="display:none" id="31">21</td>
+            <td style="display:none" id="31">31</td>
         </tr>
         <tr>
-            <td style="display:none" id="32">22</td>
+            <td style="display:none" id="32">32</td>
         </tr>
         <tr>
-            <td style="display:none" id="33">23</td>
+            <td style="display:none" id="33">33</td>
         </tr>
     </table>
     </div>
@@ -217,7 +223,7 @@
         document.getElementById("netpay").value=np;
     }
 
-    function addEmployee()
+    function addStudent()
     { 
         var employeename=document.getElementById("name").value;
         employee.push(employeename);
@@ -247,7 +253,7 @@
         td4.innerHTML=grosspay*1;
         td5.innerHTML=deductionamount;
         td6.innerHTML=netpay*1;
-        td7.innerHTML='<input type="button" name="del" value="Delete" onclick="delEmployee(this);" class="btn btn-danger">'
+        td7.innerHTML='<input type="button" name="del" value="Delete" onclick="delStudent(this);" class="btn btn-danger">'
 
         document.getElementById("tbl").appendChild(tr);
         
@@ -262,7 +268,7 @@
 
     }
 
-    function delEmployee(Stud){
+    function delStudent(Stud){
         var s=Stud.parentNode.parentNode;
         s.parentNode.removeChild(s);
 
